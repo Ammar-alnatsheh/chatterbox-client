@@ -4,8 +4,6 @@ var Rooms = {
   _selectedRoom: '',
 
   initialize: function() {
-    Rooms._selectedRoom = '-- All Rooms --';
-    Rooms.add('-- All Rooms --');
   },
 
   update: function() {
@@ -24,6 +22,7 @@ var Rooms = {
 
   add: function(room) {
     Rooms._list.add(room);
+    Rooms.setSelectedRoom(room);
     // update the Rooms list
     RoomsView.render();
 
@@ -36,7 +35,7 @@ var Rooms = {
 
   setSelectedRoom: function(room) {
     Rooms._selectedRoom = room;
-    console.log(Rooms._selectedRoom);
+    MessagesView.render();
 
   }
 
