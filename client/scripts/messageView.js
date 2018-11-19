@@ -8,7 +8,7 @@ var MessageView = {
           <div class="text">
             <%- text %>
           </div>
-          <div class="time"> Update at:
+          <div class="time"> Update at -
             <%- new Date(updatedAt).toLocaleTimeString('en-US') %>
           </div>
       </div>
