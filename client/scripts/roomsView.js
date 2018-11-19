@@ -17,6 +17,7 @@ var RoomsView = {
   },
 
   render: function() {
+    RoomsView.$select.html('');
     var $rooms = Rooms.get();
     $rooms.forEach(function(room) {
       RoomsView.renderRoom(room);
