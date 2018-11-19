@@ -16,6 +16,9 @@ var App = {
     App.fetch(App.stopSpinner);
     App.stopSpinner();
 
+    // get new messages every 3 sec
+    setInterval(App.fetch, 3000);
+
   },
 
   fetch: function(callback = ()=>{}) {
