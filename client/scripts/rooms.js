@@ -1,6 +1,12 @@
 var Rooms = {
 
   _list: new Set(),
+  _selectedRoom: '',
+
+  initialize: function() {
+    Rooms._selectedRoom = '-- All Rooms --';
+    Rooms.add('-- All Rooms --');
+  },
 
   update: function() {
     Messages.get().forEach(function(message) {
@@ -20,6 +26,17 @@ var Rooms = {
     Rooms._list.add(room);
     // update the Rooms list
     RoomsView.render();
+
+  },
+
+  getSelectedRoom: function() {
+    return Rooms._selectedRoom;
+
+  },
+
+  setSelectedRoom: function(room) {
+    Rooms._selectedRoom = room;
+    console.log(Rooms._selectedRoom);
 
   }
 
