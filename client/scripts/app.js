@@ -14,6 +14,7 @@ var App = {
     // Fetch initial batch of messages
     App.startSpinner();
     App.fetch(App.stopSpinner);
+    App.stopSpinner();
 
   },
 
@@ -21,6 +22,7 @@ var App = {
     Parse.readAll((data) => {
       // examine the response from the server request:
       Messages.update(data.results);
+      Rooms.update();
       callback();
     });
   },
