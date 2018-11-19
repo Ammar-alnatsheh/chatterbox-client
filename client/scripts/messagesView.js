@@ -3,6 +3,11 @@ var MessagesView = {
   $chats: $('#chats'),
 
   initialize: function() {
+    MessagesView.$chats.on('click', '.username', function(event) {
+      var username = event.currentTarget.textContent;
+      Friends.toggleStatus(username);
+    });
+    
   },
 
   render: function() {
