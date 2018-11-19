@@ -10,6 +10,8 @@ var Friends = {
       Friends._friendsList.delete(friend);
     }
 
+    MessagesView.render();
+
   },
 
   isFriend: function(friend){
